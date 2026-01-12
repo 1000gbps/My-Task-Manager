@@ -19,7 +19,7 @@ let taskId = 0;
 
 // Traducciones principales
 const translations = {
-    es: { title: "Mi Gestor De Tareas", placeholder:"Nueva tarea", add:"Añadir", pendientes:"Pendientes", enprogreso:"Echo", completadas:"Echo" },
+    es: { title: "Mi Gestor De Tareas", placeholder:"Nueva tarea", add:"Añadir", pendientes:"Pendientes", enprogreso:"En progreso", completadas:"Echo" },
     en: { title:"My Task Manager", placeholder:"New task", add:"Add", pendientes:"To Do", enprogreso:"Doing", completadas:"Done" },
     zh: { title:"我的任务管理器", placeholder:"新任务", add:"添加", pendientes:"待办", enprogreso:"进行中", completadas:"已完成" },
     ar: { title:"مدير المهام الخاص بي", placeholder:"مهمة جديدة", add:"إضافة", pendientes:"مهام", enprogreso:"قيد التنفيذ", completadas:"تم" },

@@ -1,0 +1,74 @@
+* { box-sizing: border-box; margin:0; padding:0; font-family:'Poppins', sans-serif; }
+
+body {
+    display:flex; justify-content:center; align-items:flex-start;
+    min-height:100vh; background:linear-gradient(120deg, #89f7fe, #66a6ff);
+    padding: 20px;
+}
+
+.app {
+    background:#fff; width:100%; max-width:900px; padding:30px; border-radius:25px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.12); transition: transform 0.3s, box-shadow 0.3s;
+}
+.app:hover { transform: translateY(-5px); box-shadow:0 25px 40px rgba(0,0,0,0.18); }
+
+h1 {
+    text-align:center; margin-bottom:25px;
+    font-weight:700; font-size:2.2rem;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGradient 5s ease infinite;
+}
+@keyframes textGradient { 0% { background-position:0% 50%; } 50% { background-position:100% 50%; } 100% { background-position:0% 50%; } }
+
+form { display:flex; gap:10px; margin-bottom:20px; }
+input { flex:1; padding:12px; border-radius:12px; border:2px solid #ddd; font-size:16px; transition:all 0.3s; }
+input:focus { border-color:#3498db; box-shadow:0 0 8px rgba(52,152,219,0.5); outline:none; }
+button { padding:12px 18px; border-radius:12px; border:none; background:#3498db; color:#fff; cursor:pointer; font-weight:700; transition:all 0.3s; }
+button:hover { background:#2980b9; transform:scale(1.05); }
+
+.columns { display:flex; gap:20px; flex-wrap:wrap; }
+.column { flex:1; background:#f9f9f9; padding:15px; border-radius:20px; box-shadow:0 10px 20px rgba(0,0,0,0.08); min-width:250px; }
+.column h2 {
+    text-align:center; margin-bottom:15px; font-weight:600; 
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Lista de tareas */
+ul { list-style:none; padding:0; min-height:50px; transition: all 0.3s ease; }
+li {
+    padding:12px; background:#fff; border-radius:12px; margin-bottom:10px;
+    display:flex; justify-content:space-between; align-items:center;
+    cursor:grab; transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    font-weight:500; font-size:1rem; color:#333; position: relative;
+}
+li.dragging { opacity:0.5; transform:scale(1.05); }
+
+/* Hover de tareas */
+li:hover {
+    transform: translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    background: linear-gradient(90deg, #fdfbfb, #ebedee);
+}
+
+/* Botones */
+li button { border:none; border-radius:8px; cursor:pointer; font-weight:bold; padding:5px 10px; transition:all 0.2s; }
+.btn-delete { background:#e74c3c; color:#fff; }
+.btn-delete:hover { background:#c0392b; transform:scale(1.1); }
+
+/* Dropzone feedback */
+.dropzone.dragover { background: #d6f5ff; }
+
+/* Selector de idioma styling */
+#languageSelect { padding:5px 8px; border-radius:6px; border:1px solid #ccc; font-size:0.9rem; }
+
+/* Responsive */
+@media(max-width: 500px) {
+    .app { padding:20px; }
+    input { font-size:14px; }
+    button { font-size:14px; padding:10px 14px; }
+    li { padding:10px; font-size:0.95rem; }
+}
